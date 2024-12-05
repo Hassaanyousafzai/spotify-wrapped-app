@@ -1,0 +1,148 @@
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #121212;
+  color: #1db954;
+}
+
+.app {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  background-color: #181818;
+  padding: 20px;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.time-range-selector {
+  margin-top: 10px;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1db954;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* New text animation */
+@keyframes slideText {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.scroll-text {
+  position: absolute;
+  top: 45%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: white;
+  opacity: 0.4; /* Low opacity */
+  white-space: nowrap;
+  animation: slideText 30s linear infinite; /* Adjust the duration as needed */
+  z-index: -1; /* Keeps the text behind the card */
+}
+
+.scroll-text span {
+  margin-right: 40px; /* Medium space between the text */
+}
+
+.app-content {
+  position: relative;
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.track-swiper {
+  overflow: hidden;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.track-list {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
+}
+
+.track-card {
+  flex: 0 0 96%;
+  box-sizing: border-box;
+  text-align: center;
+  background: #181818;
+  border: 2px solid #1db954;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.album-cover {
+  width: 70%; /* Reduced from 100% */
+  max-width: 300px; /* Maximum width constraint */
+  aspect-ratio: 1 / 1; /* Keeps the image square */
+  height: auto;
+  margin: 0 0 0 0;
+  border-radius: 10px;
+  /* border: 2px solid #1db954; Outline to enhance image focus */
+}
+
+.track-info {
+  margin-top: 15px;
+  color: #fff;
+}
+
+.track-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.track-info p {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+.track-info a {
+  color: #1db954;
+  text-decoration: none;
+}
+
+.side-decor {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #1db954;
+  font-size: 2rem;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.side-decor.left {
+  left: 5%;
+  text-align: right;
+}
+
+.side-decor.right {
+  right: 5%;
+  text-align: left;
+}

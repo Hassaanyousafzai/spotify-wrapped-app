@@ -1,0 +1,5 @@
+Flask==2.3.2
+spotipy==2.23.0
+gspread==5.9.0
+pandas==2.1.1
+oauth2client==4.1.3
